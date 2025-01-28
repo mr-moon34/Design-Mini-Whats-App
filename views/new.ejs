@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/new.css">
+
+
+<body>
+    <div class="form-container">
+        <h2>Create Chat</h2>
+        <form method="POST" action="/chats">
+            <div class="form-group">
+                <label for="from">Sender Name</label>
+                <input 
+                    type="text" 
+                    name="from" 
+                    id="from" 
+                    placeholder="Enter your name" 
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="msg">Message</label>
+                <textarea 
+                    name="msg" 
+                    id="msg" 
+                    placeholder="Write your message here" 
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="to">Receiver</label>
+                <input 
+                    type="text" 
+                    name="to" 
+                    id="to" 
+                    placeholder="Enter receiver's name" 
+                    required
+                >
+            </div>
+
+            <button type="submit">Create Chat</button>
+        </form>
+    </div>
+</body>

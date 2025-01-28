@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.new-chat-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.new-chat-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.new-chat-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.chat-list {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.chat-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    background-color: #fefefe;
+    transition: background-color 0.3s ease;
+}
+
+.chat-item:hover {
+    background-color: #f1f1f1;
+}
+
+.chat-id, .chat-from, .chat-to, .chat-timestamp .time, .chat-timestamp .date {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.chat-message {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.message-content {
+    margin: 0;
+    color: #333;
+}
+
+.message-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #bd2130;
+}
+
+.chat-timestamp {
+    margin-top: 10px;
+}
+
+.time, .date {
+    font-size: 13px;
+    color: #777;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}

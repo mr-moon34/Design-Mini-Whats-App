@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/edit.css">
+
+
+<body>
+    <div class="form-container">
+        <h2>Edit Chat</h2>
+        <p>Edit Your Chat: <%= chat.id %></p>
+        <p>From: <strong><%= chat.from %></strong> to: <strong><%= chat.to %></strong></p>
+        <form method="POST" action="/chats/<%= chat.id %>?_method=PUT">
+            <div class="form-group">
+                <label for="msg">Message</label>
+                <textarea 
+                    name="msg" 
+                    id="msg" 
+                    rows="6" 
+                    placeholder="Edit your message here" 
+                    required
+                ><%= chat.msg %></textarea>
+            </div>
+            <button type="submit">Edit</button>
+        </form>
+    </div>
+</body>

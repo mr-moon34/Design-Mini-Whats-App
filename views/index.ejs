@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/css/index.css">
+
+<form method="GET" action="/chats/new" class="new-chat-form">
+    <button class="new-chat-button">Create New Chat</button>
+</form>
+
+<div class="chat-list">
+    <% for (let chat of chats) { %>
+        <div class="chat-item">
+            <p class="chat-id">Id: <%= chat.id %></p>
+            <p class="chat-from">From: <%= chat.from %></p>
+            <div class="chat-message">
+                <p class="message-content"><%= chat.msg %></p>
+
+                <div class="message-actions">
+                    <form method="GET" action="/chats/<%=chat.id%>/edit" class="edit-form">
+                        <button class="edit-button">Edit</button>
+                    </form>
+
+                    <form method="POST" action="/chats/<%= chat.id %>?_method=DELETE" class="delete-form">
+                        <button class="delete-button">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <p class="chat-to">Received By: <%= chat.to %></p>
+
+            <div class="chat-timestamp">
+                <p class="time">Time: <%= chat.created_at.toString().split(" ")[4] %></p>
+                <p class="date">Date: <%= chat.created_at.toString().split(" ").slice(0,4).join("-") %></p>
+            </div>
+
+            <hr class="divider">
+        </div>
+    <% } %>
+</div>
